@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>note2voice studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="backdrop backdrop-a"></div>
+    <div class="backdrop backdrop-b"></div>
+    <div class="page-shell">
+      <header class="hero card reveal">
+        <div>
+          <p class="eyebrow">note2voice studio</p>
+          <h1>ノートから、音声用の話し方とプロンプトまで一気に組み立てる。</h1>
+          <p class="hero-copy">
+            Web UI を主画面にしたまま、mock と real の両方で 4 段 artifact を生成します。real mode では server 側だけで OpenAI API を呼びます。
+          </p>
+        </div>
+        <div class="hero-meta">
+          <span class="meta-chip">Web UI</span>
+          <span class="meta-chip">4-stage pipeline</span>
+          <span class="meta-chip">Server-side real mode</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="editor-panel card reveal reveal-delay-1">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Input</p>
+              <h2>ノートエディタ</h2>
+            </div>
+            <div id="status-pill" class="status-pill idle">Ready</div>
+          </div>
+
+          <div class="sample-strip" id="sample-strip"></div>
+
+          <div class="control-grid">
+            <label class="field">
+              <span>Run name</span>
+              <input id="run-name" type="text" value="studio-run" />
+            </label>
+
+            <label class="field">
+              <span>Execution mode</span>
+              <select id="execution-mode">
+                <option value="mock">Mock</option>
+                <option value="real">Real</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Stage mode</span>
+              <select id="stage-mode">
+                <option value="all">All stages</option>
+                <option value="stage">Only one stage</option>
+                <option value="from">From a stage</option>
+              </select>
+            </label>
+
+            <label class="field" id="stage-value-field" hidden>
+              <span>Stage value</span>
+              <select id="stage-value">
+                <option value="brief">brief</option>
+                <option value="spoken-script">spoken-script</option>
+                <option value="eleven-v3-prompt">eleven-v3-prompt</option>
+                <option value="qa">qa</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field field-block">
+            <span>Note content</span>
+            <textarea id="note-input" spellcheck="false"></textarea>
+          </label>
+
+          <div class="editor-footer">
+            <div class="subtle-info">
+              <span id="char-count">0 chars</span>
+              <span>UTF-8 / front matter optional</span>
+            </div>
+            <button id="generate-button" class="generate-button" type="button">
+              Generate artifacts
+            </button>
+          </div>
+        </section>
+
+        <section class="results-panel card reveal reveal-delay-2">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Output</p>
+              <h2>Artifact preview</h2>
+            </div>
+            <div id="result-path" class="result-path">No run yet</div>
+          </div>
+
+          <div class="milestone-note" id="mode-note">
+            生成は 4 段を別々に実行します。real mode の API key は browser へ渡しません。
+          </div>
+
+          <div class="error-box" id="error-box" hidden></div>
+
+          <section class="prompt-panel" id="prompt-panel">
+            <div class="prompt-panel-head">
+              <div>
+                <p class="section-label">Prompt</p>
+                <h3>Eleven v3 final prompt</h3>
+              </div>
+              <button id="copy-prompt-button" class="secondary-button" type="button" disabled>
+                Copy prompt
+              </button>
+            </div>
+            <p class="prompt-meta" id="prompt-meta">
+              ここには <code>03-eleven-v3-prompt.json</code> の <code>final_prompt</code> が表示されます。
+            </p>
+            <textarea id="prompt-output" class="prompt-output" readonly spellcheck="false">まだ prompt は生成されていません。</textarea>
+          </section>
+
+          <div class="result-summary" id="result-summary">
+            <div class="empty-state">
+              サンプルを読み込むか、ノートを貼り付けて Generate artifacts を押してください。
+            </div>
+          </div>
+
+          <div class="viewer-tabs" id="viewer-tabs" hidden></div>
+
+          <pre id="json-viewer" class="json-viewer">まだ生成されていません。</pre>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
