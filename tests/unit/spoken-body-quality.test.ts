@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import { findSpokenScriptBodyIssues } from "../../src/stages/brief-to-spoken-script.js";
 import type { SpokenScriptArtifact } from "../../src/types.js";

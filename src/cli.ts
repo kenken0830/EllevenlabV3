@@ -1,4 +1,4 @@
-﻿import process from "node:process";
+import process from "node:process";
 import { pathToFileURL } from "node:url";
 
 import { loadQaReport } from "./artifacts.js";

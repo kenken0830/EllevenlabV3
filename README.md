@@ -1,4 +1,4 @@
-﻿# note2voice
+# note2voice
 
 Japanese note-to-voice prompt pipeline with a Web UI and CLI.
 

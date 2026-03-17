@@ -1,4 +1,4 @@
-﻿export const spokenScriptSchemaName = "spoken_script_artifact";
+export const spokenScriptSchemaName = "spoken_script_artifact";
 
 export const spokenScriptJsonSchema = {
   type: "object",

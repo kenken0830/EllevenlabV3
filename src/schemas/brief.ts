@@ -1,4 +1,4 @@
-﻿export const briefSchemaName = "brief_artifact";
+export const briefSchemaName = "brief_artifact";
 
 export const briefJsonSchema = {
   type: "object",

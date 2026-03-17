@@ -1,4 +1,4 @@
-﻿import { constants } from "node:fs";
+import { constants } from "node:fs";
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
 

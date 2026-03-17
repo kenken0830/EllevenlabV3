@@ -1,4 +1,4 @@
-﻿import OpenAI from "openai";
+import OpenAI from "openai";
 
 import { StageExecutionError } from "./errors.js";
 import type { StageName } from "./types.js";

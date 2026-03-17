@@ -1,4 +1,4 @@
-﻿# QA rubric
+# QA rubric
 
 ## Score 1 to 5
 1 = weak

@@ -1,4 +1,4 @@
-﻿import { generateStructuredStageOutput } from "../openai-client.js";
+import { generateStructuredStageOutput } from "../openai-client.js";
 import {
   qaReportJsonSchema,
   qaReportSchemaName,

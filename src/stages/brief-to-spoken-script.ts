@@ -1,4 +1,4 @@
-﻿import { StageExecutionError } from "../errors.js";
+import { StageExecutionError } from "../errors.js";
 import { generateStructuredStageOutput } from "../openai-client.js";
 import {
   spokenScriptJsonSchema,

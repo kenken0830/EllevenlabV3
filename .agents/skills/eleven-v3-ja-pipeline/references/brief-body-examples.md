@@ -1,4 +1,4 @@
-﻿# Brief Body Examples
+# Brief Body Examples
 
 Use these as contrastive examples for the brief stage.
 The body should stay in recognition and reframe.

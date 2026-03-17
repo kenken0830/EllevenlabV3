@@ -1,4 +1,4 @@
-﻿# Handoff
+# Handoff
 
 ## Current State
 - Project: Japanese note -> brief -> spoken_script -> eleven_v3_prompt -> qa_report pipeline with Web UI and CLI.

@@ -1,4 +1,4 @@
-﻿export const SCHEMA_VERSION = "0.1" as const;
+export const SCHEMA_VERSION = "0.1" as const;
 export const SOURCE_NOTE_FILE = "00-source-note.json" as const;
 export const MANIFEST_FILE = "manifest.json" as const;
 export const STAGES = [

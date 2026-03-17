@@ -1,4 +1,4 @@
-﻿import {
+import {
   Ajv2020,
   type ErrorObject,
   type ValidateFunction,

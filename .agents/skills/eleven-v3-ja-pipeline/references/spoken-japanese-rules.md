@@ -1,4 +1,4 @@
-﻿# Spoken Japanese rules for this repo
+# Spoken Japanese rules for this repo
 
 ## Core target
 Turn writing into speech that sounds like one thoughtful person talking to one listener.

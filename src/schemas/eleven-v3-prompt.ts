@@ -1,4 +1,4 @@
-﻿export const elevenV3PromptSchemaName = "eleven_v3_prompt_artifact";
+export const elevenV3PromptSchemaName = "eleven_v3_prompt_artifact";
 
 export const elevenV3PromptJsonSchema = {
   type: "object",

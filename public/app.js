@@ -1,4 +1,4 @@
-﻿const EMPTY_PROMPT_MESSAGE = "まだ prompt は生成されていません。";
+const EMPTY_PROMPT_MESSAGE = "まだ prompt は生成されていません。";
 
 const state = {
   currentTab: "sourceNote",

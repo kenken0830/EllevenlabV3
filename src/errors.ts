@@ -1,4 +1,4 @@
-﻿import type { StageFailureKind, StageName } from "./types.js";
+import type { StageFailureKind, StageName } from "./types.js";
 
 export class StageExecutionError extends Error {
   stage: StageName;

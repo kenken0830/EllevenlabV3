@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   BriefArtifact,
   ElevenV3PromptArtifact,
   QaReportArtifact,

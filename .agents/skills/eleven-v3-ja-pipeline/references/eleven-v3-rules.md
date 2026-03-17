@@ -1,4 +1,4 @@
-﻿# ElevenLabs v3 rules for this repo
+# ElevenLabs v3 rules for this repo
 
 Use these rules when producing `eleven_v3_prompt`.
 

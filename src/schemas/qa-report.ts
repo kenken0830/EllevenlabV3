@@ -1,4 +1,4 @@
-﻿const qaScoreSchema = {
+const qaScoreSchema = {
   type: "object",
   additionalProperties: false,
   required: ["score", "reason"],
